@@ -1,0 +1,37 @@
+<%- include('../partials/head')-%>
+<main class="login-pag" id="login" style="background-image: url(../../images/bride_64.jpg)" >
+
+  <div class="container login_page mt-2">
+    <div class="col-sm-12">
+      <div class="car backgroun">
+        <div class="card-body mt-3">
+          <h2 class="mb-4 text-center text ">Reserve a Seat</h2>
+          <%- include('../partials/message')-%>
+        
+          <form action="/edit/<%= event.id %>" method="POST" class="backgroun">
+            
+            <div class="back">
+              <input required type="text" name="name" value="<%= event.name %>" >
+            </div>
+           
+            <div class="back">
+              <i class="fa fa-email" aria-hidden="true"></i>
+              <input type="email" name="email" class="" value="<%= event.email %>">
+            </div>
+            <div class="back">
+              <input required type="number" name="number" value="<%= event.number %>">
+            </div>
+
+            <a href="/dash" class="btn btn-block btn-danger">Cancel</a>
+            <button class="btn butt btn-block mt-4"  type="submit">
+              Save</button><br>
+            
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include('../partials/footer')-%>

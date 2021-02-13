@@ -1,0 +1,51 @@
+<%- include('../partials/head')-%>
+<main class="login-pag" id="login" style="background-image: url(../../images/bride_64.jpg)" >
+
+  <div class="container login_page mt-2">
+    <div class="col-sm-12">
+      <div class="car backgroun">
+        <div class="card-body mt-3">
+          <h2 class="mb-4 text-center text ">Reserve a Seat</h2>
+          <%- include('../partials/message')-%>
+        
+          <form action="/reserve" method="POST" class="backgroun">
+            
+            <div class="back">
+              <input required type="text" name="name" placeholder="Enter Name" >
+            </div>
+           
+            <div class="back">
+            
+              <input type="email" name="email" placeholder="Enter Email">
+            </div>
+             
+            <div class="back">
+              <!-- <label for="category">Choose Category</label> -->
+              <select name="category"  id="category" class="back"  >
+                <option >Single table</option>
+                <option>Single table</option>
+                <option>Single table</option>
+                <option>Single table</option>
+              </select>
+        
+              </datalist>
+            </div>
+            <div class="dropdown dropright">
+            
+            </div>
+            <div class="back">
+              <input required type="number" name="number"     placeholder="Phone Number">
+            </div>
+
+            <button class="btn butt btn-block mt-4"  type="submit">
+              Book Now</button><br>
+            
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include('../partials/footer')-%>

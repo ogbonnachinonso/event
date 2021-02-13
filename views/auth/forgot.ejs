@@ -1,0 +1,23 @@
+<%- include('../partials/head')-%>
+
+  <main class="forgot-padding" id="login" style="background-image: url(../../images/jewellery.jpg)" >
+   
+  <div class="container forgot_pass mt-5  w-50 ">
+    <h2 class=" text-center text ">Forgot Password</h2>
+    <%- include('../partials/message')-%>
+    <form action="/forgot" method="POST">
+      <div class=" back">
+        <input required type="email" name="email" placeholder="Enter Email">
+      </div>
+      
+      <button class="btn butt  float-righ mt-4" type="submit">Send Email</button>
+    </form>
+    <div class="text-center">
+    <a class="float-right py-2" href="/login">Back to Login</a>
+  </div>
+ 
+    
+  </div>
+</main>
+
+<%- include('../partials/footer')-%>
