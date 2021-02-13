@@ -19,8 +19,7 @@ const flash = require('connect-flash');
 
 // load config
 require('dotenv').config();
-require('./config/passport')(passport);
-// require('./config/story')(passport);
+// require('./config/passport')(passport);
 //cloudinary config
 const cloudinary = require('cloudinary');
   require('./config/cloudinary');
@@ -67,5 +66,5 @@ app.use((req, res, next) => {
 app.use('/', require('./controllers/eventController'));
 app.use(galleryController)
 
-const port = process.env.PORT ||3000;
+const port = process.env.PORT ||4000;
 app.listen(port, () => console.log(`server running  on port ${port} `))
