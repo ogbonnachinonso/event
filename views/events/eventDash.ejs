@@ -58,6 +58,7 @@
                 <th>Name</th>
                 <th>Date</th>
                 <th>Email</th>
+                <th>Category</th>
                 <th>Phone Number</th>
                 <th><button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2"><a href="/book"
                       class="fas fa-pencil-alt mt-0"></a>
@@ -70,6 +71,7 @@
                 <td><%= event.name %></td>
                 <td><%= event.createdAt.toLocaleDateString() %></td>
                 <td><%= event.email %></td>
+                <td><%= event.category %></td>
                 <td><%= event.number %></td>
                 <td>
                   <a href="/edit/<%= event.id %>" class="btn btn-outline-warning  btn-float mt-2"><i class="fa fa-edit ">edit</i></a>

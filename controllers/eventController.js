@@ -50,15 +50,6 @@ router.get("/edit/:id", async (req, res) => {
 router.post('/edit/:id', async (req, res) => {
   try {
     let event = await Event.findById(req.params.id)
-    // let data = {
-    //   name: req.body.name,
-    //   email: req.body.email,
-    //   number: req.body.number
-    // };
-    // await event.UpdateOne({ _id: req.params.id }, data, {
-    //   new: true,
-    //   // runValidators: true,
-    // })
     if (!event) {
       return res.render('error/404');
     } else {
