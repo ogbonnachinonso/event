@@ -7,6 +7,10 @@ const User = require('../models/user');
 //login landing page
 //get route
 router.get('/', (req, res) => {
+  res.render('login');
+});
+
+router.get('/event', (req, res) => {
   res.render('index');
 });
 
@@ -86,7 +90,7 @@ router.post("/delete/:id", async (req, res) => {
 router.get("/dash", (req, res) => {
   Event.find({})
     .then(events => {
-      res.render('events/eventDash', { events: events });
+      res.render('events/dashboard', { events: events });
     })
     .catch(err => {
       req.flash('error_msg', 'ERROR: +err');
@@ -94,19 +98,5 @@ router.get("/dash", (req, res) => {
     })
 });
 
-router.get('/signup', (req, res) => {
-  res.render('auth/signup');
-});
 
-router.get('/login', (req, res) => {
-  res.render('auth/login');
-});
-
-router.get('/forgot', (req, res) => {
-  res.render('auth/forgot');
-});
-
-router.get('/change', (req, res) => {
-  res.render('auth/change');
-});
 module.exports = router;

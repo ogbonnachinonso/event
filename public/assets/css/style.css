@@ -528,7 +528,7 @@ ul li {
 }
 
 .navbar-b.navbar-trans .nav-link:before {
-  background-color: #fff;
+  background-color:#263238;
 }
 
 .navbar-b.navbar-trans .nav-link:hover {
@@ -574,7 +574,7 @@ ul li {
 }
 
 .navbar-b.navbar-reduce .navbar-toggler span {
-  background-color: #fff;
+  background-color: #263238;
 }
 
 .navbar-b .navbar-brand {
@@ -659,6 +659,11 @@ ul li {
   opacity: 0.9;
 }
 
+
+.sidebar .sidebar-nav .sidebar-nav-item{
+  background: #263238;
+  color: #D50000;
+}
 /*--------------------------------------------------------------
 # Intro Section
 --------------------------------------------------------------*/

@@ -1,13 +1,14 @@
 const express = require('express');
  const mongoose = require('mongoose');
  const bodyParser = require('body-parser');
+ const nodemailer = require('nodemailer');
 
  const path = require('path');
  const dotenv = require('dotenv');
 
  const passport = require('passport');
 const session = require('express-session');
-// const localStrategy = require('passport-local');
+
 const MongoStore = require('connect-mongo')(session)
 const flash = require('connect-flash');
  const eventController = require('./controllers/eventController');
@@ -19,7 +20,8 @@ const flash = require('connect-flash');
 
 // load config
 require('dotenv').config();
-// require('./config/passport')(passport);
+ require('./config/passport')(passport);
+
 //cloudinary config
 const cloudinary = require('cloudinary');
   require('./config/cloudinary');
@@ -64,7 +66,9 @@ app.use((req, res, next) => {
 })
 
 app.use('/', require('./controllers/eventController'));
-app.use(galleryController)
+app.use('/auth', require('./controllers/authController'));
+app.use(galleryController);
 
-const port = process.env.PORT ||4000;
+
+const port = process.env.PORT || 4000;
 app.listen(port, () => console.log(`server running  on port ${port} `))

@@ -11,16 +11,16 @@ const User= require('../models/user');
 router.get('/google', passport.authenticate('google',{ scope: ['profile'] }));
 
 //@desc Google Auth callback
-//@route GET /auth/googlecallback
+//@route GET /auth/google/callback
 router.get('/google/callback', passport.authenticate('google', {failureRedirect: '/'}), (req, res) =>{
-  res.redirect('/dashboard')
+  res.redirect('/event')
 });
 
 //@desc logout user
 //@route /auth/logout
 router.get('/logout', (req, res) =>{
   req.logout()
-  res.redirect('/');
+  res.redirect('/login');
 });
 
 

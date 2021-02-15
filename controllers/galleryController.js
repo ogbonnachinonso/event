@@ -115,10 +115,10 @@ router.post("/delete/:id",  async (req, res) => {
   }
 });
 
-router.get("/dashboard",  (req, res) => {
+router.get("/mygallery",  (req, res) => {
   Gallery.find({})
     .then(galleries => {
-      res.render('events/dashboard', { galleries: galleries });
+      res.render('gallery/galleryDash', { galleries: galleries });
     })
     .catch(err => {
       req.flash('error_msg', 'ERROR: +err');

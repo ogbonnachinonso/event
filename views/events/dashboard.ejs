@@ -1,47 +1,54 @@
+
 <%- include('../partials/dash')-%>
 
 <!-- main content -->
 <div class="wrapper">
-
+  
   <div class="row">
     <div class="col-12 col-m-12 col-sm-12">
       <div class="card">
         <div class="card-header">
           <h3>
-            Gallery
+            Event
           </h3>
           <i class="fas fa-ellipsis-h"></i>
         </div>
         <%- include('../partials/message')-%>
-        <div class="card-content">
-          <table>
+        <div class="card-content ">
+          <table class="">
             <thead>
               <tr>
-                <th>Description</th>
-                <!-- <th>Date</th> -->
-                <th>Image</th>
-                <th><button type="button" class="btn btn-outline-danger btn-rounded btn-sm px-2"><a href="/addGallery"
+                <th>Name</th>
+                <th>Date</th>
+                <th>Email</th>
+                <th>Category</th>
+                <th>Phone Number</th>
+                <th><button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2"><a href="/book"
                       class="fas fa-pencil-alt mt-0"></a>
                     <i></i> </button></th>
               </tr>
             </thead>
             <tbody>
-              <% galleries.forEach((gallery)=>{%>
+              <% events.forEach((event)=>{%>
               <tr>
-                <td><%= gallery.description %></td>
-                <!-- <td><%= gallery.createdAt.toLocaleDateString() %></td> -->
-                <td><%= gallery.imgUrl %></td>
+                <td><%= event.name %></td>
+                <td><%= event.createdAt.toLocaleDateString() %></td>
+                <td><%= event.email %></td>
+                <td><%= event.category %></td>
+                <td><%= event.number %></td>
                 <td>
-                  <i class="bg-success"></i>
-                  <a href="/edit/<%= gallery.id %>" style="text-decoration: none; color: #FFF;"
-                    class="btn btn-success  mt-2">Edit</a>
-
-                  <form action="/delete/<%= gallery.id %>" method="POST" id="delete-form">
-
+                  
+                    <i class="bg-success"></i>
+                  <a href="/edit/<%= event.id %>"  style="text-decoration: none; color: #20af1b;" class="btn btn-warning  mt-2">Edit</a>
+                
+                
+                  <form action="/delete/<%= event.id %>" method="POST" id="delete-form">
                     <i class="bg-danger"></i>
                     <button type="submit" class="btn btn-danger ">Delete</button>
                   </form>
+                
                 </td>
+                
               </tr>
               <%})%>
             </tbody>
@@ -49,8 +56,8 @@
         </div>
       </div>
     </div>
-
-  </div>
+    
+ 
 </div>
 <!-- end main content -->
 <!-- import script -->
@@ -67,7 +74,7 @@
 <script src="../assets/js/main.js"></script>
 
 <script>
-  $("#menu-toggle").click(function (e) {
+  $("#menu-toggle").click(function(e) {
     e.preventDefault();
     $("#wrapper").toggleClass("toggled");
   });
@@ -76,4 +83,6 @@
 </body>
 
 </html>
->
+
+
+
