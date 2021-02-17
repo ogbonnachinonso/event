@@ -341,7 +341,7 @@ ul li {
 .back-to-top {
   position: fixed;
   display: none;
-  background: #7a8b14;
+  background: #FF6F00;
   color: #fff;
   width: 44px;
   height: 44px;
@@ -510,7 +510,7 @@ ul li {
 }
 
 .navbar-b.navbar-trans .nav-link:hover, .navbar-b.navbar-reduce .nav-link:hover {
-  color: #1B1B1B;
+  color: #fff;
 }
 
 .navbar-b.navbar-trans .nav-link:hover:before, .navbar-b.navbar-reduce .nav-link:hover:before {
@@ -574,7 +574,7 @@ ul li {
 }
 
 .navbar-b.navbar-reduce .navbar-toggler span {
-  background-color: #263238;
+  background-color: #fff;
 }
 
 .navbar-b .navbar-brand {
@@ -601,7 +601,7 @@ ul li {
 }
 
 .navbar-b .dropdown-menu .dropdown-item:hover {
-  background-color: #0097A7;
+  background-color: #263238;
   color: #fff;
   transition: all 500ms ease;
 }
@@ -660,10 +660,6 @@ ul li {
 }
 
 
-.sidebar .sidebar-nav .sidebar-nav-item{
-  background: #263238;
-  color: #D50000;
-}
 /*--------------------------------------------------------------
 # Intro Section
 --------------------------------------------------------------*/
@@ -680,6 +676,7 @@ ul li {
   width: 100%;
   opacity: .7;
 }
+
 .intro {
   height: 120vh;
   position: relative;
@@ -692,7 +689,7 @@ ul li {
 }
 
 .intro .overlay-itro {
-  background-color: #263238c0;
+  background-color: #2d3826c0;
   position: absolute;
   top: 0;
   left: 0px;
@@ -820,11 +817,11 @@ ul li {
 
 .work-content .w-like {
   font-size: 2.5rem;
-  color: #0097A7;
+  color: #263238;
   float: right;
 }
 .work-content .w-like a {
-  color: #0097A7;
+  color:  #263238;
 }
 
 
@@ -856,7 +853,7 @@ ul li {
 }
 
 .portfolio-details .portfolio-details-carousel .owl-dot.active {
-  background-color: #0097A7 !important;
+  background-color: #FFA000 !important;
 }
 
 .portfolio-details .portfolio-info {
@@ -922,6 +919,7 @@ ul li {
     margin-top: 30px;
   }
 }
+
 .about-top{
   margin-top:30px;
 }
