@@ -1,0 +1,23 @@
+<%- include('../partials/head')-%>
+<main class="login-pag" id="login" style="background-image: url(../../images/bride_64.jpg)" >
+
+
+<div class="site-section bg-lightx ">
+  <div class="container">
+      <div class="row justify-content-center text-center">
+          <div class="col-md-5">
+              <div class="subscribe pt-5">
+                  <h2>Subscribe to our newsletter</h2>
+                  <%- include('../partials/message')-%>
+                  <p class="mb-5 text-white">Please Subscribe to our newsletter to be the first to know when we post a fresh content on our page</p>
+                  <form action="/send" method="POST" class="d-flex">
+                      <input type="text" class="form-control" placeholder="Enter your email address">
+                    
+                      <input type="submit" class="btn btn-primary" value="Subscribe">
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<%- include('../partials/footer')-%>

@@ -1,5 +1,5 @@
 <%- include('partials/head') -%>
-<div id="home" class="intro route bg-image" style="background-image: url(../images/bride_3.jpg)">
+<div id="home" class="intro route bg-image" style="background-image: url(https://res.cloudinary.com/nduka/image/upload/v1613754417/muxzgrbcn36a4jq3qrtc.jpg)">
 
   <div class="overlay-itro"></div>
   <div class="intro-content display-table">
@@ -29,26 +29,26 @@
 </section><!-- End Hero -->
 
 
-<section class="portfolio-details mt-3" id="bg">
+<section class="gallery-details mt-3" id="bg">
   <div class="container-fluid">
     <h1 class="section-title text-center pt-3 pb-2">Gallery</h1>
-    <div class="portfolio-details-container">
+    <div class="gallery-details-container">
 
-      <div class="owl-carousel portfolio-details-carousel">
+      <div class="owl-carousel gallery-details-carousel">
         <div>
           <img src="../images/bride_2.jpg" class="img-fluid" alt="">
           <a href="/addGallery">
-            <h1 class="text-color carousel-caption">Welcome to our Page</h1>
+            <h1 class="text-color carousel-caption">Welcome</h1>
           </a>
         </div>
         <div>
-          <img src="../images/wedding-dress.jpg" class="img-fluid" alt="">
+          <img src="https://res.cloudinary.com/nduka/image/upload/v1613754476/xnn5mjz9uxdzibw1oeu9.jpg" class="img-fluid" alt="">
           <a href="/video">
-            <h1 class="text-warning carousel-caption">See Video</h1>
+            <h1 class=" carousel-caption">See Video</h1>
           </a>
         </div>
         <div>
-          <img src="../images/couple.jpg" class="img-fluid" alt="">
+          <img src="https://res.cloudinary.com/nduka/image/upload/v1613754417/muxzgrbcn36a4jq3qrtc.jpg" class="img-fluid" alt="">
           <a href="/gallery">
             <h1 class=" carousel-caption">View Gallery</h1>
           </a>
@@ -76,7 +76,7 @@
     </div>
     <div class="row">
       <div class="col-lg-6 about-img wow fadeInLeft">
-        <img src="../images/bride_1.jpg" width="100%" alt="">
+        <img src="https://res.cloudinary.com/nduka/image/upload/v1613754476/xnn5mjz9uxdzibw1oeu9.jpg" width="100%" alt="">
       </div>
 
       <div class="col-lg-6 content wow fadeInRight">
@@ -134,12 +134,12 @@
               <a href="https://twitter.com/@ogbonnaubadire" class="twitter">
                 <i class="btn fa fa-twitter icon"></i>
               </a>
-              <a href="#" class="facebook">
+                <a href="https://bit.ly/2Z6Xyxw" class="facebook">
                 <i class="btn fa fa-facebook "></i>
               </a>
-              <a href="#" class="instagram">
+              <!-- <a href="#" class="instagram">
                 <i class="btn fa fa-instagram "></i>
-              </a>
+              </a> -->
               <a href="#" class="github">
                 <i class="btn fa fa-github icon"></i>
               </a>
@@ -175,31 +175,32 @@
           <div class="form">
             <div id="sendmessage" class="text-center">Message Us</div>
             <br>
+            <%- include('partials/message') -%>
             <div id="errormessage"></div>
             <form action="/send" method="POST" role="form" class="contactForm">
               <div class="form-row">
                 <div class="form-group col-lg-6">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
+                  <input required type="text" name="name" class="form-control" id="name" placeholder="Your Name"
                     data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                   <div class="validation"></div>
                 </div>
                 <div class="form-group col-lg-6">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                  <input required type="email" class="form-control" name="email" id="email" placeholder="Your Email"
                     data-rule="email" data-msg="Please enter a valid email" />
                   <div class="validation"></div>
                 </div>
                 <div class="form-group col-lg-6">
-                  <input type="number" class="form-control" name="phone" id="phone" placeholder="Your Phone Number"
+                  <input required type="number" class="form-control" name="phone" id="phone" placeholder="Your Phone Number"
                     data-rule="minlen:11" data-msg="Please enter a valid number" />
                   <div class="validation"></div>
                 </div>
                 <div class="form-group col-lg-6">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
+                  <input required type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
                     data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                   <div class="validation"></div>
                 </div>
                 <div class="form-group col-lg-12">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required"
+                  <textarea required class="form-control" name="message" rows="5" data-rule="required"
                     data-msg="Please write something for us" placeholder="Message"></textarea>
                   <div class="validation"></div>
                 </div>

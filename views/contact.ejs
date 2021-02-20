@@ -1,0 +1,139 @@
+<%- include('partials/head') -%>
+<div class="intro intro-single route bg-image" style="background-image: url(https://res.cloudinary.com/nduka/image/upload/v1613754476/xnn5mjz9uxdzibw1oeu9.jpg)">
+  <div class="overlay-mf"></div>
+  <div class="intro-content display-table">
+    <div class="table-cell">
+      <div class="container">
+        <!-- <h2 class="intro-title mb-4">Portfolio Details</h2> -->
+        <h2 class="intro-title mb-4"><span style="color: #ff9f43">Con</span><span style="color: #f5f5f5">ta</span><span style="color: #f5f5f5">ct</span> <span style="color: #ff9f43">Pa<span><span style="color: #ff9f43">ge<span></h2>
+        <ol class="breadcrumb d-flex justify-content-center">
+          <li class="breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="breadcrumb-item active">Contact Us</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main id="bg">
+
+  <!-- ======= Contact Section ======= -->
+  <section class="paralax-mf footer-paralax bg-image sect-mt4 route"
+    style="background-image: url(https://res.cloudinary.com/nduka/image/upload/v1613754476/xnn5mjz9uxdzibw1oeu9.jpg)">
+    <div class="overlay-mf"></div>
+    <div class="container" >
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="contact-mf">
+            <div id="contact" class="box-shadow-full">
+              <h1 class="section-title text-center pt-1">Our Contact</h1>
+              <hr>
+              <div class="row">
+                
+                  <div class="col-lg-4 col-md-4">
+                    <div class="contact-abou" >
+                      <h3>
+                        <strong>
+                          <small class="px-4">OgbFolio</small>
+                        </strong>
+                      </h3>
+                      <p class="text-center px-3 ">For further information, enquiries and or assistance, contact us through the following links below or you reach us via email and on phone through the email and phone number below
+                      </p>
+                      <div class="social-links  ml-5 mb-3 icon">
+                        <a href="https://twitter.com/@ogbonnaubadire" class="twitter">
+                          <i class="btn fa fa-twitter icon"></i>
+                        </a>
+                          <a href="https://bit.ly/2Z6Xyxw" class="facebook">
+                          <i class="btn fa fa-facebook "></i>
+                        </a>
+                        <a href="#" class="instagram">
+                          <i class="btn fa fa-instagram "></i>
+                        </a>
+                        <a href="#" class="github">
+                          <i class="btn fa fa-github icon"></i>
+                        </a>
+                        <a href="https://bit.ly/2Z6Xyxw" class="linkedin">
+                          <i class="btn fa fa-linkedin icon"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <div class="col-lg-3 col-md-4">
+                    <div class="info">
+                      <div class="text-center dar px-4">
+                        <i class="ion-ios-location-outline"></i>
+                        <p>Locate us @ 2 Ubadire Street, Aba,
+                          <br>Abia state, Nigeria</p>
+                      </div>
+          
+                      <div class="text-center dar">
+                        <i class="ion-ios-email-outline"></i>
+                        <p><i>chinonsoubadire2@gmail.com</i></p>
+                      </div>
+          
+                      <div class="text-center dar px-4">
+                        <i class="ion-ios-telephone-outline"></i>
+                        <p>07080399120</p>
+                      </div>
+          
+                    </div>
+                  </div>
+          
+                  <div class="col-lg-5 col-md-8">
+                    <div class="form">
+                      <div id="sendmessage" class="text-center">Message Us</div>
+                      <br>
+                      <%- include('partials/message') -%>
+                      <div id="errormessage"></div>
+                      <form action="/send" method="POST" role="form" class="contactForm">
+                        <div class="form-row">
+                          <div class="form-group col-lg-6">
+                            <input required type="text" name="name" class="form-control" id="name" placeholder="Your Name"
+                              data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <div class="validation"></div>
+                          </div>
+                          <div class="form-group col-lg-6">
+                            <input required type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                              data-rule="email" data-msg="Please enter a valid email" />
+                            <div class="validation"></div>
+                          </div>
+                          <div class="form-group col-lg-6">
+                            <input required type="number" class="form-control" name="phone" id="phone" placeholder="Your Phone Number"
+                              data-rule="minlen:11" data-msg="Please enter a valid number" />
+                            <div class="validation"></div>
+                          </div>
+                          <div class="form-group col-lg-6">
+                            <input required type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
+                              data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                            <div class="validation"></div>
+                          </div>
+                          <div class="form-group col-lg-12">
+                            <textarea required class="form-control" name="message" rows="5" data-rule="required"
+                              data-msg="Please write something for us" placeholder="Message"></textarea>
+                            <div class="validation"></div>
+                          </div>
+                          <div class="col-md-12 text-center mb-3">
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                          </div>
+                          <div class="text-center">
+                            <button type="submit" class="btn btn-dark" title="Send Message">Send Message</button>
+                          </div>
+                      </form>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<%- include('partials/footer') -%>

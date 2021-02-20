@@ -133,8 +133,8 @@
     }
   });
 
-  // Portfolio details carousel
-  $(".portfolio-details-carousel").owlCarousel({
+  // gallery details carousel
+  $(".gallery-details-carousel").owlCarousel({
     autoplay: true,
     dots: true,
     loop: true,
