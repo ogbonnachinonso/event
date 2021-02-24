@@ -1,27 +1,26 @@
 <%- include('../partials/header')-%>
-<main class="login-pag" id="login" style="background-image: url(assets/img/bg.jpg)" >
+<main class="login-pag" id="login" style="background-image: url(https://res.cloudinary.com/nduka/image/upload/v1614155084/a3afyjimomapaotwh0ar.jpg)">
 
   <div class="container login_page">
     <h1 class="mb-3 mt-3 text-white">Edit Post</h1>
     <%- include('../partials/message')-%>
-   
-    <form action="/edit/<%= blog.id %>" method="POST" enctype="multipart/form-data">
-     <div class="form-group">
-       <label for="description">Description</label>
-       <textarea name="description" id="description" class="form-control" ><%= gallery.description %></textarea>
-     </div>
-     <div class="form-group">
-       <label for="image">Upload Image</label> 
-       <input type="file" id="image" 
-              name="image" value="<%= gallery.imgUrl %>" required> 
-     </div> 
-    
-     <a href="/dashboard" class="btn btn-danger">Cancel</a>
-     <button type="submit" class="btn btn-save">Save</button>
+
+    <form action="/editGallery/<%= gallery.id %>" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea name="description" id="description" class="form-control"><%= gallery.description %></textarea>
+      </div>
+      <div class="form-group">
+        <label for="image">Upload Image</label>
+        <input type="file" id="image" name="image" value="<%= gallery.imgUrl %>" required>
+      </div>
+
+      <a href="/dashboard" class="btn btn-danger">Cancel</a>
+      <button type="submit" class="btn btn-warning text-white">Save</button>
     </form>
-   </div>
-   
+  </div>
+
 </main>
 
 
-<%- include('../partials/tfooter')-%>
+<%- include('../partials/footer')-%>

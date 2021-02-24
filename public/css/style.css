@@ -501,7 +501,7 @@ a:hover {
 .line-mf {
   width: 50px;
   height: 5px;
-  background-color: #036370;
+  background-color: #fff;
   margin: 0 auto;
 }
 
@@ -604,55 +604,6 @@ a:hover {
   }
 }
 
-/*------/ Button /------*/
-.button {
-  display: inline-block;
-  padding: .3rem .6rem;
-  text-align: center;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: 1rem;
-  border-radius: .3rem;
-  border: 1px solid transparent;
-  transition: all 500ms ease;
-  cursor: pointer;
-}
-
-.button:focus {
-  outline: 0;
-}
-
-.button:hover {
-  background-color: #0097A7;
-  color: #fff;
-  transition: all 500ms ease;
-}
-
-.button-a {
-  background-color: #0097A7;
-  color: #fff;
-  border-color: #cde1f8;
-}
-
-.button-big {
-  padding: .9rem 2.3rem;
-  font-size: 1.2rem;
-}
-
-.button-rouded {
-  border-radius: 5rem;
-  background: #0097A7;
-}
-
-.btn-lg {
-  padding: .5rem 1rem;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  border-radius: .3rem;
-}
 
 /*--------------------------------------------------------------
 # Nav Bar
@@ -890,13 +841,21 @@ color: #ffff;
 background: #263238;
 color: #ffff;
 }
-
+.table_header{
+	font-weight: bold;
+}
 #add{
 border-radius: 15px;
 }
 .fa-small{
 font-size: 16px !important;
 }
+
+.save{
+background: #FF8F00;
+color: #fff;
+}
+
 .btn-float{
 float: left;
 

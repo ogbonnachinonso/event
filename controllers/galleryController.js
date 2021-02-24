@@ -24,7 +24,7 @@ router.get("/gallery", (req, res) => {
     })
     .catch(err => {
       req.flash('error_msg', 'ERROR: +err');
-      res.redirect('/');
+      res.redirect('/event');
     })
 });
 
@@ -60,18 +60,20 @@ router.post('/addGallery', upload.single('image'), async (req, res, next) => {
 });
 
 // Get routes edit/:id
-router.get("/edit/:id", upload.single('image'), async (req, res) => {
+router.get("/editGallery/:id", upload.single('image'), async (req, res) => {
   try {
-    let gallery = await Gallery.findById(req.params.id);
+    // let gallery = await Gallery.findById(req.params.id);
+    const gallery = await Gallery.findOne({ _id: req.params.id });
     res.render('gallery/edit', { gallery });
   }
   catch (err) {
     req.flash('error_msg', 'ERROR: +err');
-    res.redirect('/gallery');
+    res.redirect('/mygallery');
+    console.error(err)
   }
 });
 
-router.post('/edit/:id', upload.single("image"), async (req, res) => {
+router.post('/editGallery/:id', upload.single("image"), async (req, res) => {
   try {
     const gallery = await Gallery.findById(req.params.id)
     // Delete image from cloudinary
@@ -79,27 +81,25 @@ router.post('/edit/:id', upload.single("image"), async (req, res) => {
     // Upload image to cloudinary
     const result = await cloudinary.uploader.upload(req.file.path);
     let data = {
-      name: req.body.name,
-      work: req.body.work,
-      story: req.body.story,
+      description: req.body.description,
       imgUrl: result.secure_url
 
     };
-    await gallery.findByIdAndUpdate({ _id: req.params.id }, data, {
+    await Gallery.findByIdAndUpdate({ _id: req.params.id }, data, {
       new: true,
       // runValidators: true,
     })
     req.flash('success_msg', 'Gallery updated successfully');
-    res.redirect('/gallery');
+    res.redirect('/mygallery');
   } catch (err) {
     req.flash('error_msg', 'ERROR: +err');
-    res.redirect('/gallery');
+    res.redirect('/mygallery');
     console.error(err)
   }
 });
 
 //delete request starts here
-router.post("/delete/:id",  async (req, res) => {
+router.post("/deleteGallery/:id",  async (req, res) => {
   try {
     // Find gallery by id
     let gallery = await Gallery.findById(req.params.id);
@@ -108,10 +108,10 @@ router.post("/delete/:id",  async (req, res) => {
     // Delete gallery from db
     await gallery.remove();
     req.flash('success_msg', 'Gallery post deleted successfully');
-    res.redirect('/gallery');
+    res.redirect('/mygallery');
   } catch (err) {
     req.flash('error_msg', 'ERROR: +err');
-    res.redirect('/gallery');
+    res.redirect('/mygallery');
   }
 });
 

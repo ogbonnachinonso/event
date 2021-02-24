@@ -1,46 +1,44 @@
+
 <%- include('../partials/dash')-%>
 
 <!-- main content -->
 <div class="wrapper mt-3">
-
+  
   <div class="row">
     <div class="col-12 col-m-12 col-sm-12">
       <div class="card">
         <div class="card-header">
           <h3>
-            Gallery
+           Users
           </h3>
           <i class="fas fa-ellipsis-h"></i>
         </div>
         <%- include('../partials/message')-%>
-        <div class="card-content">
-          <table>
+        <div class="card-content ">
+          <table class="">
             <thead>
               <tr>
-                <th class="table_header">Description</th>
-                <th class="table_header">Image</th>
-                <th class="table_header"><button type="button" class="btn btn-outline-danger btn-rounded btn-sm px-2"><a href="/addGallery"
+                <th class="table_header">Display Name</th>
+                <th class="table_header">First Name</th>
+                <th class="table_header">Date</th>
+                
+                <th><button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2"><a href=""
                       class="fas fa-pencil-alt mt-0"></a>
                     <i></i> </button></th>
               </tr>
             </thead>
             <tbody>
-              <% galleries.forEach((gallery)=>{%>
+              <% users.forEach((user)=>{%>
               <tr>
-                <td><%= gallery.description %></td>
-              
-                <td><%= gallery.imgUrl %></td>
+                <td><%= user.displayName %></td>
+                
+                <td><%= user.firstName %></td>
+                <td><%= user.createdAt.toLocaleDateString() %></td>
                 <td>
-                  <i class="bg-success"></i>
-                  <a href="/editGallery/<%= gallery.id %>" style="text-decoration: none; color: #FFF;"
-                    class="btn btn-success  mt-2">Edit</a>
-
-                  <form action="/deleteGallery/<%= gallery.id %>" method="POST" id="delete-form">
-
-                    <i class="bg-danger"></i>
-                    <button type="submit" class="btn btn-danger ">Delete</button>
-                  </form>
+                  
+                   
                 </td>
+                
               </tr>
               <%})%>
             </tbody>
@@ -48,11 +46,11 @@
         </div>
       </div>
     </div>
-
-  </div>
+    
+ 
 </div>
 <!-- end main content -->
-
+<!-- import script -->
 <script src="../assets/vendor/jquery/jquery.min.js"></script>
 <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
@@ -66,8 +64,8 @@
 <script src="../assets/js/main.js"></script>
 
 <script>
-  $("#menu-toggle").click(function (e) {
-    e.preventDefault();
+  $("#menu-toggle").click(function(e) {
+    e.pruserDefault();
     $("#wrapper").toggleClass("toggled");
   });
 </script>
@@ -75,3 +73,6 @@
 </body>
 
 </html>
+
+
+

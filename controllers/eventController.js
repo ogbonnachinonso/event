@@ -99,6 +99,17 @@ router.get("/dash", (req, res) => {
     })
 });
 
+router.get("/users", (req, res) => {
+  User.find({})
+    .then(users => {
+      res.render('events/users', { users: users });
+    })
+    .catch(err => {
+      req.flash('error_msg', 'ERROR: +err');
+      res.redirect('/login');
+    })
+});
+
 router.get('/subscribe', (req, res) => {
   res.render('events/subscribe');
 });
@@ -128,8 +139,6 @@ router.post('/send', (req, res) => {
         pass: "70b8eb187fa5d5"
       }
     });
-
-
 
   // setup email data with unicode symbols
   let mailOptions = {
