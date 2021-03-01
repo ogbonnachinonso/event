@@ -513,8 +513,8 @@ ul li {
 
 .navbar-b.navbar-trans .nav-link, .navbar-b.navbar-reduce .nav-link {
   color: #fff;
-  text-transform: uppercase;
-  font-weight: 600;
+  text-transform: capitalize;
+  font-weight: 100;
 }
 
 .navbar-b.navbar-trans .nav-link:before, .navbar-b.navbar-reduce .nav-link:before {
@@ -605,7 +605,7 @@ ul li {
 .navbar-b .navbar-brand {
   color: #fff;
   font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .navbar-b .navbar-nav .dropdown-item.show .dropdown-menu,
@@ -730,18 +730,16 @@ ul li {
 }
 .intro-title {
   color: #fff;
-  font-weight: 600;
-  font-size: 3rem;
- margin-left: 10px;
+  font-weight: 400;
+  font-size: 2rem;
   margin-top: 120px;
 }
 .p-title {
   color: #fff;
-  font-weight: 600;
-  font-size: 3rem;
- margin-left: 10px;
-  margin-top: 120px;
-  padding-top: 155px;
+  font-weight: 400;
+  font-size: 2rem;
+  margin-top: 70px;
+  padding-top: 100px;
 }
 
 @media (min-width: 768px) {
@@ -944,7 +942,26 @@ ul li {
     margin-top: 30px;
   }
 }
+@media (max-width: 320px) {
+  #home #hero{
+    width: 100%;
+  }
+  
+}
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+   .gallery-details .gallery-description h2 {
+      width: 100%;
+    }
+    .gallery-details .gallery-info {
+      position: static;
+      margin-top: 30px;
+    }
 
+}
 .about-top{
   margin-top:30px;
 }
@@ -1008,7 +1025,27 @@ margin-bottom: 50px;
 padding: 13px 0;
 color: #ffff;
 }
-
+.input_form{
+  width: 100%;
+}
+.input_form{
+  width: 75%;
+  border-radius: 10px;
+  border: 1px solid #FFB74D;
+  background: transparent;
+  color: #fff;
+  padding: 8px;
+}
+.btn-block{
+  background: #FB8C00;
+  color: #fff;
+  border-radius: 10px;
+}
+.btn-login{
+  background: #FB8C00;
+  color: #fff;
+  border-radius: 10px;
+}
 .back{
   width: 100%;
   overflow: hidden;
@@ -1025,6 +1062,7 @@ color: #ffff;
   text-align: center;
 }
 .back input{
+  width: 130%;
   border: none;
   outline: none;
   
@@ -1033,7 +1071,7 @@ color: #ffff;
   font-size: 18px;
   width: 80%;
   float: left;
-  margin:  5px;
+  margin:  15px;
 
 }
 .back select{
@@ -1042,7 +1080,7 @@ color: #ffff;
   background-color: transparent;
   color: #455A64;
   font-size: 18px;
-  width: 80%;
+  width: 100%;
   float: left;
   margin:  5px;
 

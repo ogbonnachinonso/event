@@ -30,7 +30,7 @@ router.post('/reserve', async (req, res, next) => {
       event.number = req.body.number
     await event.save()
     req.flash('success_msg', 'Event Added Successfully')
-    res.redirect('/dash')
+    res.redirect('/book')
   }
   catch (err) {
     req.flash('error_msg', 'ERROR: +err');

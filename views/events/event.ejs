@@ -2,25 +2,25 @@
 <main class="login-pag" id="login" style="background-image: url(../../images/bride_64.jpg)" >
 
   <div class="container login_page mt-2">
-    <div class="col-sm-12">
+    <div class="col-lg-12 col-md-12 col-sm-12 ">
       <div class="car backgroun">
-        <div class="card-body mt-3">
+        <div class="card-bod mt-3">
           <h2 class="mb-4 text-center text ">Reserve a Seat</h2>
           <%- include('../partials/message')-%>
         
           <form action="/reserve" method="POST" class="backgroun">
             
-            <div class="back">
-              <input required type="text" name="name" placeholder="Enter Name" >
+            <div class=" form-group" style="width: 100%;">
+              <input required type="text" name="name" class="input_form bac form-control" style="width: 100%;" placeholder="Enter Name" >
             </div>
            
-            <div class="back">
+            <div class=" form-group" style="width: 100%;">
             
-              <input type="email" name="email" placeholder="Enter Email">
+              <input type="email" name="email" class="input_form form-control" style="width: 100%;" placeholder="Enter Email">
             </div>
              
-            <div class="back">
-              <select name="category"  id="category" class="back"  >
+            <div class="form-group" style="width: 100%;">
+              <select name="category"  id="category" class=" input_form form-control" style="width: 100%;" >
                 <option >Single table</option>
                 <option>Table for Two</option>
                 <option>General Table</option>
@@ -34,8 +34,9 @@
             <div class="dropdown dropright">
             
             </div>
-            <div class="back">
-              <input required type="number" name="number"     placeholder="Phone Number">
+            <div class=" form-group " style="width: 100%;">
+            
+              <input required type="number" name="number" class="input_form form-control" placeholder="Phone Number" style="width: 100%;">
             </div>
 
             <button class="btn butt btn-block mt-4"  type="submit">
