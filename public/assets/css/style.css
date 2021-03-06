@@ -965,10 +965,15 @@ ul li {
 .about-top{
   margin-top:30px;
 }
+#venue{
+  color:#190F3A;
+  font-size: 17px;
+  background: #c9d3dd;
+}
 #about{
   color:#190F3A;
   font-size: 17px;
-  background: #ECEFF1;
+  background: #E8EAF6;
 }
 #about .about-img {
   padding-bottom: 15px;
