@@ -19,9 +19,13 @@ a {
 }
 
 a:hover {
-  color: #04e6ff;
+  color: #D50000;
+  font-weight: bold;
   text-decoration: none;
   transition: all 0.5s ease-in-out;
+}
+.ion-android-checkmark-circle{
+  color: #8E24AA;
 }
 
 ul li {
@@ -969,6 +973,10 @@ ul li {
   color:#190F3A;
   font-size: 17px;
   background: #c9d3dd;
+}
+.display{
+  display: inline;
+  margin-left: ;
 }
 #about{
   color:#190F3A;
