@@ -13,6 +13,7 @@ const MongoStore = require('connect-mongo')(session)
 const flash = require('connect-flash');
  const eventController = require('./controllers/eventController');
  const galleryController = require('./controllers/galleryController');
+ const Bio = require('./controllers/bioController');
  const Event = require('./models/event');
 
  const connectDB = require('./config/db');
@@ -68,6 +69,7 @@ app.use((req, res, next) => {
 app.use('/', require('./controllers/eventController'));
 app.use('/auth', require('./controllers/authController'));
 app.use(galleryController);
+app.use(Bio);
 
 
 const port = process.env.PORT || 4000;

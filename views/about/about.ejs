@@ -1,0 +1,84 @@
+<%- include('../partials/head') -%>
+
+  <div class="intro intro-single route bg-image" style="background-image: url(https://res.cloudinary.com/nduka/image/upload/v1615100180/s8coymvc5pjxwmpvi4s8.jpg)">
+    <div class="overlay-mf"></div>
+    <div class="intro-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <a href="">
+            <h2 class="intro-title mb-4 pb-4"><span style="color: #f5f5f5">Ab</span><span
+                style="color: #ff9f43">ou</span><span style="color: #f5f5f5">t</span> <span
+                style="color: #ff9f43">Us<span></h2>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="b">
+
+
+    <section id="" class="portgallery-mf sect-pt route">
+      <div class="container-fluid"  >
+    
+        <div class=>
+          <% bios.forEach((bio)=>{%>
+            <div class="section">
+           
+              <div class="circle circle1">
+                <img src="https://res.cloudinary.com/nduka/image/upload/v1613754476/xnn5mjz9uxdzibw1oeu9.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="mx-2">
+                <h3 class="text-center mt-5"> Our Short Bio</h3>
+                <p class="subtitle-a text-white">
+                  <b class="text-white">Bride:</b>
+                  <%= bio.bride %>
+                </p>
+                <p class="subtitle-a">
+                  <b>Groom:</b>
+                  <%= bio.groom %>
+                </p>
+                <p class="subtitle-a">
+                  <b>How We Met:</b>
+                  <%= bio.met %>
+                </p>
+                <p class="subtitle-a">
+                  <b>Our Parents:</b>
+                  <%= bio.brideparents %>
+                </p>
+                <p class="subtitle-a">
+                  <b>Our Parents:</b>
+                  <%= bio.groomparents %>
+                </p>
+                <p class="subtitle-a">
+                  <b>Our Pastor:</b>
+                  <%= bio.pastor %>
+                </p>
+                <p class="subtitle-a">
+                  <b>Maid of Honour/:</b>
+                  <%= bio.maid %>
+                </p>
+                <p class="subtitle-a">
+                  <b>Bestman:</b>
+                  <%= bio.bestman %>
+                </p>
+  
+              </div>
+              
+              <%})%>
+            </div>
+        </div>
+    </section>
+
+
+
+
+  </main>
+
+
+
+
+
+
+
+  <%- include('../partials/footer') -%>

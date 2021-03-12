@@ -32,7 +32,45 @@ ul li {
   list-style-type: none;
 }
 
-
+.section {
+  position: relative;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(45deg, #5d5f61b6 0%, #595863a4 100%), url("https://res.cloudinary.com/nduka/image/upload/v1615100180/s8coymvc5pjxwmpvi4s8.jpg");
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+.circle {
+position: relative;
+overflow: hidden;
+}
+.circle img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  }
+.circle, .circle1 {
+   width: 300px;
+  height: 300px ;
+  float: left;
+  border-radius: 50%;
+  margin: 5px;
+  shape-outside: circle();
+  }
+  /* .circle .circle2 {
+    width: 150px;
+   height: 150px ;
+   float: right;
+   border-radius: 50%;
+   margin: 20px;
+   } */
+  .section, p{
+color: #fff;
+  }
 .avatar {
   width: 32px;
   height: 32px;
@@ -203,6 +241,9 @@ ul li {
   padding-bottom: 30px;
   padding: 20px;
   
+}
+.ico{
+  font-size: 1.5rem;
 }
 .contact-mf {
   background: #CFD8DC;
@@ -477,9 +518,12 @@ ul li {
   font-size: 1.2rem;
 }
 
-.button-rouded {
+.con{
+  color: #FF6F00;
+}
+.btt {
   border-radius: 5rem;
-  background: #0097A7;
+  background: #FF6F00;
 }
 
 .btn-lg {
@@ -694,6 +738,7 @@ ul li {
 --------------------------------------------------------------*/
 .overlay-mf {
   background-color: #263238c0;
+  color: #fff;
 }
 
 .overlay-mf {
@@ -706,6 +751,20 @@ ul li {
   opacity: .7;
 }
 
+.overlay-mff {
+  background-color: #313233a4;
+ 
+}
+
+.overlay-mff {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  opacity: .7;
+}
 .intro {
   height: 120vh;
   position: relative;
@@ -786,6 +845,9 @@ ul li {
 }  
 #bg{
   background: #ECEFF1;
+}
+#bga{
+  background: #8b98a0;
 }
 .intro-single .breadcrumb {
   background-color: transparent;
@@ -1022,6 +1084,7 @@ ul li {
   height: 100vh;
   background-size: cover;
 }
+
 .login_page{
   width: 70%;
   position: relative;
@@ -1030,6 +1093,11 @@ ul li {
   transform: translate(-50%, -50%);
   color: #ffff;
 }
+.page{
+  padding-top: 420px;
+  padding-bottom: 390px;
+}
+
 .login_page h2{
 float: left;
 font-size: 40px;
