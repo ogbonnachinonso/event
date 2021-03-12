@@ -237,7 +237,7 @@ color: #fff;
 #contact{
   color:#190F3A;
   font-size: 17px;
-  background: #CFD8DC;
+  background: #909091;
   padding-bottom: 30px;
   padding: 20px;
   
@@ -1034,11 +1034,13 @@ color: #fff;
 #venue{
   color:#190F3A;
   font-size: 17px;
-  background: #c9d3dd;
+  background: #9ba2a5;
+}
+.vee{
+  color:#190F3A;
 }
 .display{
-  display: inline;
-  margin-left: ;
+  display: inline; 
 }
 #about{
   color:#190F3A;
